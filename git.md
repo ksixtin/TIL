@@ -56,7 +56,7 @@ $ git add . # 현재
 
   
 
-## commit
+## 3. commit
 
 > 커밋은 코드의 이력을 남기는 과정이다.
 
@@ -70,7 +70,57 @@ $ git commit -m {커밋 메시지}
 $ git log
 commit
 
+마크다운 및 git 기초 정리 완료
+
 ~~~
 
 **항상 status 명령어를 통해 git의 상태를 확인하자! commit 이후에는 log 명령어를 통해 이력들을 확인하자!**
+
+
+
+##### github에서 Create a new repository를 만들고 아래 2줄을 복사해서 git cmd에 넣고 엔터치면 로그인 창이 나오고 로그인을 하면 업로드 된다.
+
+![image-20191216143504098](image/image-20191216143504098.png)
+
+
+
+## 원격 저장소 활용하기
+
+> 원격 저장소(remote repository)를 제공하는 서비스는 다양하게 존재한다.
+>
+> github를 기준으로 설명한다.
+
+### 0. 준비하기
+
+​	Github에서 저장소(repository) 생성
+
+### 1. 원격 저장소 설정
+
+~~~ bash
+$ git remote add origin {github url}
+~~~
+
+* {github url} 부분에는 원격 저장소 url을 작성한다.
+
+* 원격 저장소(remote)로 {github url} 을 origin 이라는 이름으로 추가(add)하는 명령어이다.
+
+* 원격 저장소 목록을 보기 위해서는 아래의 명령어를 활용한다.
+
+  ~~~ bash
+  $ git remote -v
+  origin  https://github.com/ksixtin/TIL.git (fetch)
+  origin  https://github.com/ksixtin/TIL.git (push)
+  ~~~
+
+## 2. push
+
+~~~ bash
+$ git push origin master
+~~~
+
+* 설정된 원격 저장소(origin)으로 push!
+
+폴더의 내용을 수정 및 삭제, 생성 등을 하게 된다면, add, commit, 명령어를 통해서 이력을 저장하고 push 명령어를 통해 업로드 한다.
+
+
 
