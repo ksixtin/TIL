@@ -124,3 +124,4 @@ $ git push origin master
 
 
 
+####  ※ 순서 : 파일저장> git add . > git commit -m '메세제' > git push origin master
